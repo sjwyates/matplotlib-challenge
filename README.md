@@ -25,6 +25,8 @@ Similarly, there is a requirement to build a summary statistics DataFrame in 2 w
 
 I also used *groupby* and *get_group* throughout the assignment to quickly retrieve subsets of the data, such to get the data for each drug regimen and extract data for individual mice from those subsets. I had some difficulty wrapping my head around the concepts of *groupby* in the Pandas assignment, but by this point it feels like second nature.
 
+`subset_df = df.groupby('Drug Regimen').get_group(regimen)`
+
 ### Lambdas
 
 Although not really part of the assignment, as a primarily JavaScript developer I do love lambda functions. There were a few good opportunities to use them: The *agg* function and *filter* function. With the *agg* function, lambdas allow you to pass in callbacks that aren't built-in functions like *mean*, such as *quantile*. And they're an elegant way to implement Python's *filter* function, which I used to get the outliers using a lambda that returns the result of a conditional much faster and more concise than using a *for* loop.
